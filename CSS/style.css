@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;800;900&family=Roboto:ital,wght@0,100;0,300;0,900;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+}
+
+.logo{
+    width: 130px;
+    height: 130px;
+    grid-column: 2 / 3;
+    cursor: pointer;
+}
+
+.navbar .menu{
+    grid-column: 4/ 6;
+    display: flex;
+    justify-content: space-around;
+    margin-right: -70%;
+}
+
+.navbar .menu ul{
+    flex-direction: column;
+}
+
+.navbar .menubar .fas{
+    font-size: 20px;
+}
+
+.navbar  .menu li{
+    list-style: none;
+}
+
+.navbar .menu a{
+    text-decoration: none;
+    color: #E31670 ;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.navbar .menu a:hover{
+    color: #6A028E  ;
+}
+
+.navbar .menubar{
+    display: none;
+}
+
+.shopping{
+    grid-column: 8 / 9;
+}
+
+#btn-menu{
+    display: none;
+}
+
+.torta{
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+
+
+/* SECTION MAIN */
+
+.hero{
+    height: 80vh;
+    height: 80vh;
+    background-image:  url(../images/postre.jpg);
+    background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.hero .info-content{
+    grid-column: 9 / 10;
+    grid-row: 3 / 7;
+     color: black;
+}
+
+.hero h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.hero h1{
+    font-size: 5em;
+}
+
+.hero p{
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero .btn{
+    font-size: 1em;
+    background: none;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.hero .btn:hover{
+    background-color: #e471a37a ;
+}
+
+
+
+/* GALERÍA */
+h1{
+    margin-top: 20px;
+    font-family: 'Monserrat';
+    color: #e3166f98;
+    text-align: center;
+}
+
+.linea{
+    border-top: 5px solid #D510C3 ;
+    margin-bottom: 40px;
+}
+
+.contenedor-img{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3ox;
+}
+
+.contenedor-img .imagen{
+    width: 32%;
+    position: relative;
+    height: 300px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0, .75);
+}
+
+.imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #f6d5ec96;
+    width: 100%;
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+.overlay h2{
+    color: black;  
+    font-weight: 800;
+    font-size:30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+
+}
+
+
+/* FOOTER */
+
+.footer{
+    display: grid;
+    height: 108px;
+    align-items: center;
+    background-color: #F5D3EB ;
+    grid-template-areas: "compraonline follow-me social-network";
+    margin-top: 40px;
+}
+
+.footer .compraonline{
+    grid-template-areas: compraonline;
+    display: flex;
+    justify-content: center;
+    background:#F4B8E1 ;
+    padding: 26px;
+    cursor: pointer;
+}
+
+.footer .compraonline .fas{
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.footer .follow-me{
+    grid-template-areas: follow-me;
+    text-align: center;
+}
+
+.footer .social-network{
+    grid-template-areas: social-network;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.footer .social-network .fab{
+    margin-right: 15px;
+}
+
+
+/* FORMULARIO */
+
+form{
+    width: 450px;
+    margin: auto;
+    background: #E5B1C4 ;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 90px;
+    border-radius: 20px;
+}
+
+h2{
+    color: black;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'Monserrat';
+
+}
+
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+}
+
+textarea{
+    min-height: 100px;
+    max-width: 200px;
+    max-width: 100%;
+}
+
+#boton{
+    background:#d13c75e1 ;
+    padding: 20px;
+}
+
+#boton:hover{
+    cursor: pointer;
+}
